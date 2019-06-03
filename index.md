@@ -64,7 +64,7 @@ Pre-requisites include: C programming language and numerical algorithms (solutio
 * [NVIDIA Profiler NVVP](Lecture Notes/Lecture_16_Profiler_Optimizing_GPU.pdf)
 * [MPI basics, collective communication](Lecture Notes/Lecture_17.pdf)
 * [MPI point-to-point communication](Lecture Notes/Lecture_18.pdf)
-* [MPI communicator and matrices](Lecture Notes/Lecture_19.pdf)
+* [MPI communicators and matrices](Lecture Notes/Lecture_19.pdf)
 
 ### Computer code
 
