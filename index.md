@@ -65,6 +65,7 @@ Pre-requisites include: C programming language and numerical algorithms (solutio
 * [MPI basics, collective communication](Lecture Notes/Lecture_17.pdf)
 * [MPI point-to-point communication](Lecture Notes/Lecture_18.pdf)
 * [MPI communicators and matrices](Lecture Notes/Lecture_19.pdf)
+* [Performance metrics for parallel computing](Lecture Notes/Lecture_20.pdf)
 
 ### Computer code
 
