@@ -83,6 +83,12 @@ Pre-requisites include: C programming language and numerical algorithms (solutio
 * [Threads](Code/pthread.zip)
 * [C++ standard library and lambda functions](Code/ex1_transform.cpp), and [solution](Code/ex1_transform_solution.cpp) 
 
+### Kahoot games
+
+* [Multithreaded programming](https://create.kahoot.it/share/multithreaded-programming/0bfac3bb-f26b-458b-bbfd-2ad71e3b7309)
+* [CUDA programming](https://create.kahoot.it/share/nvidia-gpu-programming/5972f5f7-e728-46e8-94f3-86b23d3c77b5)
+* [MPI programming](https://create.kahoot.it/share/mpi-programming/54d837db-6bc5-47fe-b967-e3005a78904e)
+
 ### Reading and links
 
 * [OpenACC](https://www.openacc.org/)
