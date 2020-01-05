@@ -13,32 +13,19 @@ Pre-requisites include: C programming language and numerical algorithms (solutio
 
 ### Basic Info
 
-* Location: [Building 300, Room 300](http://campus-map.stanford.edu/?id=300-300)  
-* Lectures: Mon/Wed/Fri 3:00-4:20PM
+* Location: [School of Education, Room 128](https://campus-map.stanford.edu/?srch=School+of+Education+128)  
+* Lectures: Mon/Wed/Fri 1:30-2:50PM
 * Instructor: [Eric Darve](https://me.stanford.edu/people/eric-darve)  
-* Course Assistants: William Jen, [Chenzhuo Zhu](http://stanford.edu/~czhu95/)
+* Course Assistants: William Jen, Kingway Liang
 * [Syllabus](CME 213 Syllabus.pdf)
 
 ### Office Hours
 
-* Monday 7-9PM; TA led; Huang basement
-* Tuesday 7-9PM; TA led; Huang basement
-* Friday 9-11AM; Instructor; bldg 520, room 125
+* TBA
 
 ### Homework
 
-* [Homework 1](Homework/hw1.pdf) and [starter code](Homework/code_hw1.zip)
-* [Homework 2](Homework/hw2.pdf), [Radix Sort Tutorial](Homework/RadixSortTutorial.pdf), and [starter code](Homework/code_hw2.zip)
-* [Homework 3](Homework/hw3.pdf) and [starter code](Homework/code_hw3.zip)
-* [Homework 4](Homework/hw4.pdf) and [starter code](Homework/code_hw4.zip)
-* [Homework 5](Homework/hw5.pdf) and [starter code](Homework/code_hw5.zip)
-* [Final Project Part 1](Homework/FinalProjectPart1.pdf)
-* [Final Project Part 2](Homework/FinalProjectPart2.pdf) and [starter code](Homework/code_project.zip)
-
 ### Google Cloud Platform 
-* [MPI 8 vCPUs](Code/create_vm_mpi_8.sh)
-* [Hw3 VM script](Code/create_vm_hw3.sh)
-* [OpenMP VM script](Code/create_vm_openmp.sh)
 * [Google Cloud Platform setup instructions](./gcp.html)
 * [VM instances information page](https://console.cloud.google.com/compute)
 * [Billing page](https://console.cloud.google.com/billing)
@@ -46,48 +33,6 @@ Pre-requisites include: C programming language and numerical algorithms (solutio
 
 ### Lecture notes
 
-* [Introduction and syllabus](Lecture Notes/Lecture_01.pdf)
-* [Parallel computing, threads](Lecture Notes/Lecture_02.pdf)
-* [Race condition, mutex](Lecture Notes/Lecture_03.pdf)
-* [OpenMP, for loops](Lecture Notes/Lecture_04.pdf)
-* [OpenMP, reduction](Lecture Notes/Lecture_05.pdf)
-* [OpenMP, sort](Lecture Notes/Lecture_06.pdf)
-* [CUDA, introduction](Lecture Notes/Lecture_07.pdf)
-* [CUDA, device memory](Lecture Notes/Lecture_08.pdf)
-* [CUDA, matrix transpose](Lecture Notes/Lecture_09.pdf)
-* [CUDA, homework 4, finite-difference](Lecture Notes/Lecture_10.pdf)
-* [CUDA, team activity, reduction](Lecture Notes/Lecture_11.pdf)
-* [CUDA, Thrust](Lecture Notes/Lecture_12.pdf)
-* [Final project](Lecture Notes/Lecture_13.pdf)
-* [NVIDIA OpenACC](Lecture Notes/Lecture_14_NVIDIA_OpenACC.pdf)
-* [NVIDIA Optimizations](Lecture Notes/Lecture_15_CUDA_Optimization.pdf)
-* [NVIDIA Profiler NVVP](Lecture Notes/Lecture_16_Profiler_Optimizing_GPU.pdf)
-* [MPI basics, collective communication](Lecture Notes/Lecture_17.pdf)
-* [MPI point-to-point communication](Lecture Notes/Lecture_18.pdf)
-* [MPI communicators and matrices](Lecture Notes/Lecture_19.pdf)
-* [Performance metrics for parallel computing](Lecture Notes/Lecture_20.pdf)
-
-### Computer code
-
-* [Jacobi](Code/jacobi.zip)
-* [MPI](Code/mpi.zip)
-* [Thrust](Code/thrust.zip)
-* [generate_sequence](Code/generate_sequence.cpp)
-* [CUDA 1](Code/cuda1.zip)
-* [CUDA 2](Code/cuda2.zip)
-* [CUDA 3, reduction](Code/cuda3.zip)
-* [OpenMP sort](Code/sort.zip)
-* [OpenMP reduction](Code/omp2.zip)
-* [OpenMP intro](Code/omp1.zip)
-* [Mutex](Code/mutex.zip)
-* [Threads](Code/pthread.zip)
-* [C++ standard library and lambda functions](Code/ex1_transform.cpp), and [solution](Code/ex1_transform_solution.cpp) 
-
-### Kahoot games
-
-* [Multithreaded programming](https://create.kahoot.it/share/multithreaded-programming/0bfac3bb-f26b-458b-bbfd-2ad71e3b7309)
-* [CUDA programming](https://create.kahoot.it/share/nvidia-gpu-programming/5972f5f7-e728-46e8-94f3-86b23d3c77b5)
-* [MPI programming](https://create.kahoot.it/share/mpi-programming/54d837db-6bc5-47fe-b967-e3005a78904e)
 
 ### Reading and links
 
@@ -119,11 +64,6 @@ Pre-requisites include: C programming language and numerical algorithms (solutio
 * [LLNL tutorial on Pthreads](https://computing.llnl.gov/tutorials/pthreads/)
 * [C++ reference](https://en.cppreference.com/w/cpp)
 
-### Tutorial notes
-
-* [C++ Refresher Session](Tutorial Notes/Tutorial_01.pdf) and [code](Tutorial Notes/code.zip)
-* [CUDA Profiling Session](Tutorial Notes/Tutorial_02.pdf) and [code](Code/cuda3.zip)
-
 ### Course Schedule
 
 Schedules are tentative and will be updated throughout the quarter.
@@ -132,26 +72,24 @@ Schedules are tentative and will be updated throughout the quarter.
 
 | Week          | Date                 | Topics                             | Homework/Project                            |
 | :-----------: | -------------------- | ---------------------------------- | --------------------------                  |
-| 1             | Mon, April 1         | Introduction and syllabus          |                                             |
-| 1             | Wed, April 3         | Parallelism, Pthreads              | HW1 out                                     |
-| 2             | Mon, April 8         | Synchronization                    |                                             |
-| 2             | Wed, April 10        | OpenMP 1: For loops                | HW1 due <br> HW2 out                        |
-| 3             | Mon, April 15        | OpenMP 2: Reduction                |                                             |
-| 3             | Wed, April 17        | OpenMP 3: Shared memory sorting    |                                             |
-| 4             | Mon, April 22        | CUDA 1                             | HW2 due                                     |
-| 4             | Wed, April 24        | CUDA 2                             | HW3 out                                     |
-| 5             | Mon, April 29        | CUDA 3, matrix transpose           |                                             |
-| 5             | Wed, May 1           | Lecture on homework 4              | HW4 out <br> HW3 due                        |
-| 6             | Mon, May 6           | Reduction                          |                                             |
-| 6             | Wed, May 8           | Thrust                             |                                             |
-| 6             | Fri, May 10          | Lecture on final project           | HW5 out <br> HW4 due <br> Final project out |
-| 7             | Mon, May 13          | OpenACC by NVIDIA                  |                                             |
-| 7             | Wed, May 15          | CUDA optimization by NVIDIA        |                                             |
-| 8             | Mon, May 20          | NVVP by NVIDIA                     |                                             |
-| 8             | Wed, May 22          | Point-to-point communication       | HW5 due                                     |
-| 9             | Mon, May 27          | ---Memorial Day---                 |                                             |
-| 9             | Wed, May 29          | Groups, communicators and topology |                                             |
-| 9             | Fri, May 31          | -                                  | Project interim report due                  |
-| 10            | Mon, June 3          | Parallel efficiency                |                                             |
-| 10            | Wed, June 5          | AlphaGo                            |                                             |
-| 10            | Sun, June 9          | -                                  | Final project due                           |
+| 1             | Mon, Jan 6           | Introduction and syllabus          |                                             |
+| 1             | Wed, Jan 8           | Parallelism, Pthreads              | HW1 out                                     |
+| 2             | Wed, Jan 15          | Synchronization                    |                                             |
+| 2             | Fri, Jan 17          | OpenMP 1: For loops                | HW1 due <br> HW2 out                        |
+| 3             | Wed, Jan 22          | OpenMP 2: Reduction                |                                             |
+| 3             | Fri, Jan 24          | OpenMP 3: Shared memory sorting    |                                             |
+| 4             | Wed, Jan 29          | CUDA 1                             | HW2 due                                     |
+| 4             | Fri, Jan 31          | CUDA 2                             | HW3 out                                     |
+| 5             | Wed, Feb 5           | CUDA 3, matrix transpose           |                                             |
+| 5             | Fri, Feb 7           | Lecture on homework 4              | HW4 out <br> HW3 due                        |
+| 6             | Wed, Feb 12          | Reduction                          |                                             |
+| 6             | Fri, Feb 14          | Thrust                             |                                             |
+| 7             | Wed, Feb 19          | Lecture on final project           | HW5 out <br> HW4 due <br> Final project out |
+| 7             | Fri, Feb 21          | OpenACC by NVIDIA                  |                                             |
+| 8             | Wed, Feb 26          | CUDA optimization by NVIDIA        |                                             |
+| 8             | Fri, Feb 28          | NVVP by NVIDIA                     |                                             |
+| 9             | Wed, Mar 4           | Point-to-point communication       | HW5 due                                     |
+| 9             | Fri, Mar 6           | Groups, communicators and topology |                                             |
+| 10            | Wed, Mar 11          | -                                  | Project interim report due                  |
+| 10            | Fri, Mar 13          | Parallel efficiency                |                                             |
+| 10            | Wed, Mar 18          | -                                  | Final project due                           |
