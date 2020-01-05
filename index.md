@@ -5,11 +5,7 @@ title: "CME 213: Introduction to Parallel Computing using MPI, openMP, and CUDA"
 
 Welcome to CME 213!
 
-This class will give hands on experience with programming multicore processors, graphics processing units (GPU), and parallel computers. Focus will be on the message passing interface (MPI, parallel clusters) and the compute unified device architecture (CUDA, GPU).  
-
-Topics will include: network topologies, modeling communication times, collective communication operations, parallel efficiency, MPI, dense linear algebra using MPI. Symmetric multiprocessing (SMP), Pthreads, openMP. CUDA, combining MPI and CUDA, dense linear algebra using CUDA, sort, reduce and scan using CUDA.
-
-Pre-requisites include: C programming language and numerical algorithms (solution of differential equations, linear algebra, Fourier transforms).
+This class will give hands-on experience with programming multicore processors, graphics processing units (GPU), and parallel computers. The focus will be on the message passing interface (MPI, parallel clusters) and the compute unified device architecture (CUDA, GPU). Topics will include multithreaded programs, GPU computing, computer cluster programming, C++ threads, OpenMP, CUDA, and MPI. Pre-requisites include C++, templates, debugging, UNIX, makefile, numerical algorithms (differential equations, linear algebra).
 
 ### Basic Info
 
@@ -17,7 +13,7 @@ Pre-requisites include: C programming language and numerical algorithms (solutio
 * Lectures: Mon/Wed/Fri 1:30-2:50PM
 * Instructor: [Eric Darve](https://me.stanford.edu/people/eric-darve)  
 * Course Assistants: William Jen, Kingway Liang
-* [Syllabus](CME 213 Syllabus.pdf)
+* [Syllabus](https://canvas.stanford.edu/courses/110850/assignments/syllabus)
 
 ### Office Hours
 
@@ -63,33 +59,3 @@ Pre-requisites include: C programming language and numerical algorithms (solutio
 * [Simple examples of C++ multithreading](https://www.geeksforgeeks.org/multithreading-in-cpp/)
 * [LLNL tutorial on Pthreads](https://computing.llnl.gov/tutorials/pthreads/)
 * [C++ reference](https://en.cppreference.com/w/cpp)
-
-### Course Schedule
-
-Schedules are tentative and will be updated throughout the quarter.
-
-[See detailed schedule](./schedule.html)
-
-| Week          | Date                 | Topics                             | Homework/Project                            |
-| :-----------: | -------------------- | ---------------------------------- | --------------------------                  |
-| 1             | Mon, Jan 6           | Introduction and syllabus          |                                             |
-| 1             | Wed, Jan 8           | Parallelism, Pthreads              | HW1 out                                     |
-| 2             | Wed, Jan 15          | Synchronization                    |                                             |
-| 2             | Fri, Jan 17          | OpenMP 1: For loops                | HW1 due <br> HW2 out                        |
-| 3             | Wed, Jan 22          | OpenMP 2: Reduction                |                                             |
-| 3             | Fri, Jan 24          | OpenMP 3: Shared memory sorting    |                                             |
-| 4             | Wed, Jan 29          | CUDA 1                             | HW2 due                                     |
-| 4             | Fri, Jan 31          | CUDA 2                             | HW3 out                                     |
-| 5             | Wed, Feb 5           | CUDA 3, matrix transpose           |                                             |
-| 5             | Fri, Feb 7           | Lecture on homework 4              | HW4 out <br> HW3 due                        |
-| 6             | Wed, Feb 12          | Reduction                          |                                             |
-| 6             | Fri, Feb 14          | Thrust                             |                                             |
-| 7             | Wed, Feb 19          | Lecture on final project           | HW5 out <br> HW4 due <br> Final project out |
-| 7             | Fri, Feb 21          | OpenACC by NVIDIA                  |                                             |
-| 8             | Wed, Feb 26          | CUDA optimization by NVIDIA        |                                             |
-| 8             | Fri, Feb 28          | NVVP by NVIDIA                     |                                             |
-| 9             | Wed, Mar 4           | Point-to-point communication       | HW5 due                                     |
-| 9             | Fri, Mar 6           | Groups, communicators and topology |                                             |
-| 10            | Wed, Mar 11          | -                                  | Project interim report due                  |
-| 10            | Fri, Mar 13          | Parallel efficiency                |                                             |
-| 10            | Wed, Mar 18          | -                                  | Final project due                           |
