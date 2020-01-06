@@ -8,7 +8,6 @@ Welcome to CME 213!
 This class will give hands-on experience with programming multicore processors, graphics processing units (GPU), and parallel computers. The focus will be on the message passing interface (MPI, parallel clusters) and the compute unified device architecture (CUDA, GPU). Topics will include multithreaded programs, GPU computing, computer cluster programming, C++ threads, OpenMP, CUDA, and MPI. Pre-requisites include C++, templates, debugging, UNIX, makefile, numerical algorithms (differential equations, linear algebra).
 
 ### Basic Info
-
 * Location: [School of Education, Room 128](https://campus-map.stanford.edu/?srch=School+of+Education+128)  
 * Lectures: Mon/Wed/Fri 1:30-2:50PM
 * Instructor: [Eric Darve](https://me.stanford.edu/people/eric-darve)  
@@ -16,8 +15,9 @@ This class will give hands-on experience with programming multicore processors, 
 * [Syllabus](https://canvas.stanford.edu/courses/110850/assignments/syllabus)
 
 ### Office Hours
-
-* TBA
+* Wednesday 7-9PM; TA led; Room TBA
+* Thursday 7-9PM; TA led; Room TBA
+* Thursday 9-10:45AM; Instructor led; bldg 520, room 120 
 
 ### Homework
 
@@ -30,8 +30,10 @@ This class will give hands-on experience with programming multicore processors, 
 ### Lecture notes
 * [Lecture 1](Lecture Notes/Lecture_01.html)
 
-### Reading and links
+### Tutorial notes
+* [C++ Refresher Slides](Tutorial Notes/Tutorial_01.pdf) and [code](Tutorial Notes/code.zip)
 
+### Reading and links
 * [OpenACC](https://www.openacc.org/)
 * [Compilers that support OpenACC](https://www.openacc.org/tools)
 * [OpenACC Specification (ver. 2.7 November 2018)](https://www.openacc.org/sites/default/files/inline-files/OpenACC.2.6.final.pdf)
