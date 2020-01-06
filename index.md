@@ -28,7 +28,7 @@ This class will give hands-on experience with programming multicore processors, 
 * [GCP dashboard](https://console.cloud.google.com/home)
 
 ### Lecture notes
-
+* [Lecture 1](Lecture Notes/Lecture_01.html)
 
 ### Reading and links
 
