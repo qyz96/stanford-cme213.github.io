@@ -35,6 +35,48 @@
             font-family: 'Inconsolata';
         }
 
+        table {
+            color: #333;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border-bottom: 1px solid;
+            /* No more visible border */
+            /* height: 30px; */
+            transition: all 0.3s;
+            /* Simple transition for hover effect */
+        }
+
+        th {
+            background: #DFDFDF;
+            /* Darken header a bit */
+            font-weight: bold;
+        }
+
+        td {
+            background: #FAFAFA;
+            text-align: center;
+        }
+
+        /* Cells in even rows (2,4,6...) are one color */
+        tr:nth-child(even) td {
+            background: #F1F1F1;
+        }
+
+        /* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+        tr:nth-child(odd) td {
+            background: #FEFEFE;
+        }
+
+        /* Hover cell effect! */
+        tr td:hover {
+            background: #666;
+            color: #FFF;
+        }
+
         /* Two-column layout */
         .left-column {
             width: 50%;
@@ -204,6 +246,15 @@ of years of received wisdom.
 class: center, middle
 
 # DNN relies on parallel computing
+
+Program | Hardware
+--- | ---
+AlphaGo Fan | 176 GPUs
+AlphaGo Lee | 48 TPUs
+AlphaGo Master | Single machine with 4 TPUs
+AlphaGo Zero | Single machine with 4 TPUs
+
+---
 
 ![:scale 70%](2020-01-06-13-10-48.png)
 
