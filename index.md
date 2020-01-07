@@ -30,6 +30,9 @@ This class will give hands-on experience with programming multicore processors, 
 ### Lecture notes
 * [Lecture 1](Lecture Notes/Lecture_01.html)
 
+### Videos
+* [Lecture 1](https://youtu.be/mmJ__Ygexos)
+
 ### Tutorial notes
 * [C++ Refresher Slides](Tutorial Notes/Tutorial_01.pdf) and [code](Tutorial Notes/code.zip)
 
