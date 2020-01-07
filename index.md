@@ -15,8 +15,8 @@ This class will give hands-on experience with programming multicore processors, 
 * [Syllabus](https://canvas.stanford.edu/courses/110850/assignments/syllabus)
 
 ### Office Hours
-* Wednesday 7-9PM; TA led; Room TBA
-* Thursday 7-9PM; TA led; Room TBA
+* Wednesday 7-9PM; TA led; Huang 304
+* Thursday 7-9PM; TA led; Huang 304
 * Thursday 9-10:45AM; Instructor led; bldg 520, room 120 
 
 ### Homework
