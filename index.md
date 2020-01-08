@@ -31,7 +31,7 @@ This class will give hands-on experience with programming multicore processors, 
 ### Lecture notes
 * [Lecture 1](Lecture Notes/Lecture_01/Lecture_01.html)
 * [Lecture 2](Lecture Notes/Lecture_02/Lecture_02.html)
-* [Lecture 2 code](Code/Lecture_02)
+* [Lecture 2 code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_02)
 
 ### Videos
 * [Lecture 1](https://youtu.be/mmJ__Ygexos)
