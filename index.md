@@ -20,6 +20,7 @@ This class will give hands-on experience with programming multicore processors, 
 * Thursday 9-10:45AM; Instructor led; bldg 520, room 120 
 
 ### Homework
+* [Homework 1](Homework/hw1.pdf) and [starter code](Homework/code_hw1.zip)
 
 ### Google Cloud Platform 
 * [Google Cloud Platform setup instructions](./gcp.html)
