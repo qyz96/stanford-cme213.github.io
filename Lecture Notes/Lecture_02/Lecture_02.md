@@ -45,6 +45,8 @@ class: center, middle
 
 # Why parallel computing?
 
+![:width 30%](2020-01-08-12-58-05.png)
+
 ---
 class: center, middle
 
@@ -79,6 +81,8 @@ Increase in transistor density is limited by:
 class: center, middle
 
 Memory access time has not been reduced at a rate comparable to the processing speed
+
+&#8595;
 
 Go parallel!
 
@@ -219,6 +223,8 @@ class: center, middle
 
 # Parallel programs often look very different sequential programs
 
+![:width 50%](2020-01-08-13-01-28.png)
+
 ---
 class: center, middle
 
@@ -258,8 +264,7 @@ int b; /* number of entries processed */
 int my_first_i = r * b;
 int my_last_i = (r + 1) * b;
 for (int my_i = my_first_i; my_i < my_last_i; 
-     my_i++)
-{
+     my_i++) {
     my_x = ComputeNextValue();
     my_sum += my_x;
 }
@@ -358,11 +363,11 @@ In reality, the memory is physically distributed.
 ---
 class: center, middle
 
-NUMA: non-uniform memory access
+NUMA non-uniform memory access
 
-Faster access to memory
+Why? Faster access to memory
 
-But special hardware required to move data between memory banks
+But, special hardware required to move data between memory banks
 
 ---
 class: center, middle
@@ -423,21 +428,26 @@ class: center, middle
 
 # Thread
 
-Thread: an extension of the process model. Can be viewed as a "lightweight" process.
+Thread: an extension of the process model. 
+
+Can be viewed as a "lightweight" process.
 
 A thread may be described as a "procedure" that runs independently from the main program.
 
 ---
 class: center, middle
 
-In this model, each process may consist of multiple independent control flows that are called **threads.**
+In this model, each process may consist of multiple independent control flows that are called 
+
+**threads**
 
 ---
 class: center, middle
 
 Imagine a program that contains a number of procedures. 
 
-Then imagine these procedures being able to be scheduled to run simultaneously and/or independently by the operating system. 
+Then imagine these procedures being able to be scheduled to run</br>
+**simultaneously and/or independently**</br>by the operating system. 
 
 This describes a **multi-threaded program.**
 
@@ -518,6 +528,41 @@ int main(void)
     ...
 }
 ```
+
+---
+class: center, middle
+
+`thread` constructor
+
+```
+thread t2(f2, m);
+```
+
+Creates a thread that will run function `f2` with argument `m`
+
+---
+class: center, middle
+
+# Reference argument
+
+```
+thread t4(f4, m, ref(k));
+```
+
+If a reference argument needs to be passed to the thread function, it has to be wrapped with `std::ref`.
+
+---
+class: center, middle
+
+`thread` join
+
+```
+t2.join();
+```
+
+Calling thread waits (blocks) for `t2` to complete (i.e., finishes running `f2`)
+
+Required before results of `t2` calculations become "usable"
 
 ---
 class: center, middle
