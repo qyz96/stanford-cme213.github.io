@@ -15,7 +15,7 @@ You can also make changes to this repository to be incorporated later by the ins
 
 If you are interested in more details and information, please check the [GitHub help page](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests).
 
-This repository is a [GitHub page](https://help.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll) that uses Jekyll. The [markdown](https://help.github.com/en/github/working-with-github-pages/setting-a-markdown-processor-for-your-github-pages-site-using-jekyll) files are converted to HTML files.
+This repository is a [GitHub Pages site](https://help.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll) that uses Jekyll. The [markdown](https://help.github.com/en/github/working-with-github-pages/setting-a-markdown-processor-for-your-github-pages-site-using-jekyll) files are converted to HTML files.
 
 To copy the files in this repository, you can click the green "Clone or download" button on the top of this page. You can also fork the repository if you have a GitHub account using the fork button on the top right.
 
