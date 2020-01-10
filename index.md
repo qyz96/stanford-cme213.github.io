@@ -16,7 +16,7 @@ This class will give hands-on experience with programming multicore processors, 
 * [Lecture 1](https://youtu.be/mmJ__Ygexos)
 * [Lecture 2](https://youtu.be/ETOp2NkZrlo)
 
-### Basic Info
+### Class Information
 * Location: [School of Education, Room 128](https://campus-map.stanford.edu/?srch=School+of+Education+128)  
 * Lectures: Mon/Wed/Fri 1:30-2:50PM
 * Instructor: [Eric Darve](https://me.stanford.edu/people/eric-darve)  
@@ -46,11 +46,6 @@ This class will give hands-on experience with programming multicore processors, 
 * [OpenACC Specification (ver. 2.7 November 2018)](https://www.openacc.org/sites/default/files/inline-files/OpenACC.2.6.final.pdf)
 * [OpenACC Programming and Best Practices Guide](http://www.openacc.org/sites/default/files/OpenACC_Programming_Guide_0.pdf)
 * [OpenACC 2.7 API Reference Card](https://www.pgroup.com/lit/literature/openacc-api-guide-2.7.pdf)
-* [Thrust programming guide](https://docs.nvidia.com/cuda/thrust/index.html)
-* [Thrust examples](https://github.com/thrust/thrust/tree/master/examples)
-* [Thrust download page](https://developer.nvidia.com/thrust)
-* [Thrust github page](https://thrust.github.io/)
-* [Thrust get started guide](https://github.com/thrust/thrust/wiki/Quick-Start-Guide)
 * [Presentations and slides on Thrust](https://github.com/thrust/thrust/downloads)
 * [CUDA occupancy calculator](Reading/CUDA_Occupancy_Calculator.xls)
 * [Kepler GK110/210 whitepaper](Reading/NVIDIA_Kepler_GK110_GK210_Architecture_Whitepaper.pdf) (the K80 uses the GK210 chip)
