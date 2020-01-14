@@ -97,7 +97,7 @@ $ ./create_vm_openmp.sh
 Updated property [compute/zone].
 Created [https://www.googleapis.com/compute/v1/projects/cme213-winter-2020/zones/us-west1-b/instances/omp].
 NAME  ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
-omp   us-west1-b  n1-standard-8               10.138.0.4   34.82.78.109  RUNNING
+omp   us-west1-b  n1-highcpu-8               10.138.0.5   34.82.44.63  RUNNING
 Installing necessary libraries. You will be able to log into the VM after several minutes with:
 gcloud compute ssh omp
 ```
@@ -253,3 +253,9 @@ Note:
 * Make sure to save and close your file before disconnecting your VM.
 
 This will greatly simplify the process of reading and modifying source files in the cloud. You now have access to all the functionalities of VS Code without worrying about a slow network connection.
+
+### Administrative, links and info
+
+* [Machine types](https://cloud.google.com/compute/docs/machine-types)
+* [Instance pricing](https://cloud.google.com/compute/vm-instance-pricing)
+* [VM images](https://cloud.google.com/compute/docs/images)
