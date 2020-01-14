@@ -9,7 +9,7 @@ gcloud config set compute/zone ${ZONE}
 
 # Create GPU instance.
 gcloud compute instances create ${NAME} \
-    --machine-type n1-standard-8 \
+    --machine-type n1-highcpu-8 \
     --image-family ubuntu-1804-lts --image-project ubuntu-os-cloud \
     --maintenance-policy TERMINATE --restart-on-failure \
     --metadata startup-script='#!/bin/bash
