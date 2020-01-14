@@ -2,7 +2,7 @@ class: center, middle
 
 # CME 213, ME 339 - Winter 2020</br>Introduction to parallel computing using MPI, openMP, and CUDA
 
-## Eric Darve, ICME, Stanford
+## Eric Darve, ICME, Stanford yoy
 
 ![:width 40%](Stanford.jpg)
 
@@ -258,6 +258,8 @@ Can we accelerate our calculation by splitting the work among the cores?
 ---
 class: middle
 
+<!-- Add schematic with splitting of vector input into chunks  -->
+
 ```
 int r; /* thread number */
 int b; /* number of entries processed */
@@ -413,160 +415,3 @@ class: center, middle
 class: center, middle
 
 ![:width 100%](2020-01-08-11-21-24.png)
-
----
-class: center, middle
-
-# Process
-
-Process: program in execution
-
-Comprises: the executable program along with all information that is necessary for the execution of the program.
-
----
-class: center, middle
-
-# Thread
-
-Thread: an extension of the process model. 
-
-Can be viewed as a "lightweight" process.
-
-A thread may be described as a "procedure" that runs independently from the main program.
-
----
-class: center, middle
-
-In this model, each process may consist of multiple independent control flows that are called 
-
-**threads**
-
----
-class: center, middle
-
-Imagine a program that contains a number of procedures. 
-
-Then imagine these procedures being able to be scheduled to run</br>
-**simultaneously and/or independently**</br>by the operating system. 
-
-This describes a **multi-threaded program.**
-
----
-class: center, middle
-
-# Shared address space
-
-All the threads of one process share the address space of the process, i.e., they have a common address space.
-
-When a thread stores a value in the shared address space, another thread of the same process can access this value.
-
----
-class: center, middle
-
-![:width 100%](2020-01-08-11-26-01.png)
-
----
-class: center, middle
-
-# Threads
-
----
-class: middle
-
-# Threads are everywhere
-
-- C++ threads (11): `std::thread`
-- "C" threads: `Pthreads`
-- Java threads: `Thread thread = new Thread();`
-- Python threads:</br>`t = threading.Thread(target=worker)`
-- Cilk: `x = spawn fib (n-1);`
-- Julia: `r = remotecall(rand, 2, 2, 2)`
-- OpenMP
-
----
-class: center, middle
-
-# C++ threads exercise
-
-Open the file `cpp_thread.cpp`
-
-Type `make` to compile
-
----
-```
-#include <thread>
-void f1() {
-    cout << "f1() called\n";
-}
-...
-void f4() { /* todo */ }
-
-int main(void)
-{
-    thread t1(f1);
-    ...
-    thread t4 /* todo */;
-    ...
-}
-```
-
----
-# Solution
-```
-void f4(int n, int &m)
-{
-    cout << "f4() called with n = " << n 
-         << " and m = " << m << endl;
-    m += n;
-}
-
-int main(void)
-{
-    ...
-    thread t4(f4, m, ref(k));
-    t4.join();
-    ...
-}
-```
-
----
-class: center, middle
-
-`thread` constructor
-
-```
-thread t2(f2, m);
-```
-
-Creates a thread that will run function `f2` with argument `m`
-
----
-class: center, middle
-
-# Reference argument
-
-```
-thread t4(f4, m, ref(k));
-```
-
-If a reference argument needs to be passed to the thread function, it has to be wrapped with `std::ref`.
-
----
-class: center, middle
-
-`thread` join
-
-```
-t2.join();
-```
-
-Calling thread waits (blocks) for `t2` to complete (i.e., finishes running `f2`)
-
-Required before results of `t2` calculations become "usable"
-
----
-class: center, middle
-
-See for more information
-
-https://en.cppreference.com/w/cpp/thread/thread
