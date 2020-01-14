@@ -95,14 +95,14 @@ Additional scripts can be found under `Code/`. For example, [create_vm_openmp.sh
 ```
 $ ./create_vm_openmp.sh 
 Updated property [compute/zone].
-Created [https://www.googleapis.com/compute/v1/projects/cme213-spring-2019/zones/us-west1-b/instances/omp].
-NAME  ZONE        MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP    STATUS
-omp   us-west1-b  n1-highcpu-8               10.138.0.3   35.230.26.234  RUNNING
+Created [https://www.googleapis.com/compute/v1/projects/cme213-winter-2020/zones/us-west1-b/instances/omp].
+NAME  ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
+omp   us-west1-b  n1-standard-8               10.138.0.4   34.82.78.109  RUNNING
 Installing necessary libraries. You will be able to log into the VM after several minutes with:
 gcloud compute ssh omp
 ```
 
-This VM is running Linux with Ubuntu 16.04.6. Any package working under Ubuntu can be installed on the VM.
+This VM is running Linux with Ubuntu. Any package working under Ubuntu can be installed on the VM.
 
 This script is similar to the one used for `hw2`.
 
@@ -159,7 +159,7 @@ or through [Compute Page](https://console.cloud.google.com/compute/). Click on S
 You might need to wait for a while if you see the following message. It's likely we are installing necessary packages for the homework/project; while this is happening ssh is disabled.
 
 ```
-ssh: connect to host 35.197.115.51 port 22: Connection refused
+ssh: connect to host XX.XX.XX.XXX port 22: Connection refused
 ERROR: (gcloud.compute.ssh) [/usr/bin/ssh] exited with return code [255].
 ```
 
