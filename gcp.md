@@ -254,7 +254,7 @@ Note:
 
 This will greatly simplify the process of reading and modifying source files in the cloud. You now have access to all the functionalities of VS Code without worrying about a slow network connection.
 
-### Administrative, links and info
+### Administrative links and info
 
 * [Machine types](https://cloud.google.com/compute/docs/machine-types)
 * [Instance pricing](https://cloud.google.com/compute/vm-instance-pricing)
