@@ -27,9 +27,9 @@ For remote editing with VS Code:
 ## Before You Start
 ---
 
-Use a non-Stanford Google account.  
-Redeem your GCP credits provided by the course.  
-Google and Piazza are always helpful.
+- Use a **non-Stanford Google account.**
+- Redeem your GCP credits provided by the course.  
+- Google and Canvas are always helpful.
 
 ## Prepare your Google Cloud Platform account
 ---
@@ -62,7 +62,7 @@ There are ~ 770 different quotas to choose from. To help you find the correct on
 
 ![](gcp/metric.png)
 
-then select `None` and in the search bar enter `GPU`. Select `GPUs (all regions)` and `NVIDIA K80 GPUs`.
+then select `None` and in the search bar enter `GPU`. Select `GPUs (all regions)` and `NVIDIA K80 GPUs`. Note: if you do not see the GPU options, it means that you need to wait a little longer for quotas to be populated.
 
 Then, click on the drop-down box under `Location` and select `Global` and `us-west1`.
 
