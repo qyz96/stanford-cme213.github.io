@@ -1,5 +1,6 @@
 CPP := g++
 CPPFLAGS := -std=c++11 -Wall
+LDFLAGS := -lpthread
 
 SRC := $(wildcard *.cpp)
 EXE := $(patsubst %.cpp,%,$(filter %.cpp,$(SRC)))
@@ -9,7 +10,7 @@ all: $(EXE)
 
 # pattern rules
 % : %.cpp
-	$(CPP) $(CPPFLAGS) -o $@ $<
+	$(CPP) $(CPPFLAGS) -o $@ $< $(LDFLAGS)
 
 .PHONY: clean
 clean:
