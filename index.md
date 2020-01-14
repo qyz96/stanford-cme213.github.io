@@ -7,10 +7,12 @@ Welcome to CME 213!
 
 This class will give hands-on experience with programming multicore processors, graphics processing units (GPU), and parallel computers. The focus will be on the message passing interface (MPI, parallel clusters) and the compute unified device architecture (CUDA, GPU). Topics will include multithreaded programs, GPU computing, computer cluster programming, C++ threads, OpenMP, CUDA, and MPI. Pre-requisites include C++, templates, debugging, UNIX, makefile, numerical algorithms (differential equations, linear algebra).
 
-### Lecture notes
+### Lecture notes and code
 * [Lecture 1](Lecture Notes/Lecture_01/Lecture_01.html)
 * [Lecture 2](Lecture Notes/Lecture_02/Lecture_02.html)
-* [Lecture 2 code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_02)
+* [C++ Refresher](Tutorial Notes/Tutorial_01.pdf) and [code](Tutorial Notes/code.zip)
+* [Lecture 3](Lecture Notes/Lecture_03/Lecture_03.html)
+* [Lecture 3 code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_03)
 
 ### Videos
 * [Lecture 1](https://youtu.be/mmJ__Ygexos)
@@ -36,9 +38,6 @@ This class will give hands-on experience with programming multicore processors, 
 * [VM instances information page](https://console.cloud.google.com/compute)
 * [Billing page](https://console.cloud.google.com/billing)
 * [GCP dashboard](https://console.cloud.google.com/home)
-
-### Tutorial notes
-* [C++ Refresher Slides](Tutorial Notes/Tutorial_01.pdf) and [code](Tutorial Notes/code.zip)
 
 ### Reading and links
 * [OpenACC](https://www.openacc.org/)
