@@ -219,10 +219,10 @@ You can see how you are doing with your credits on the [Billing Page](https://co
 
 Here we provide a table of specs for each type of virtual machine used for homework and project:
 
-|           | CPU cores | Memory     | Disk        | GPU type    | GPU number | Hourly cost |
-| --------- | :-------: | :--------: | :---------: | :---------: | :--------: | :---------: |
-| HW2       | 8         | 7.2GB      | 10GB        | -           | -          | $0.199      |
-| HW3       | 2         | 7.5GB      | 20GB        | NVIDIA K80  | 1          | $0.383      |
+|             | CPU cores | Memory     | GPU type    | GPU number  | Hourly cost |
+| ---------   | :-------: | :--------: | :---------: | :---------: | :---------: |
+| OMP 8 cores | 8         | 7.2GB      | -           | -           | $0.2836     |
+| HW3         | 2         | 7.5GB      | NVIDIA K80  | 1           | $0.383      |
 
 
 ## Remote Editor
