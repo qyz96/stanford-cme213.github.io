@@ -42,7 +42,7 @@ This class will give hands-on experience with programming multicore processors, 
 ### Reading and links
 * [C++ reference](https://en.cppreference.com/w/cpp)
 * [Simple examples of C++ multithreading](https://www.geeksforgeeks.org/multithreading-in-cpp/)
-* [C++ threads](http://www.cplusplus.com/reference/thread/thread/)
+* [C++ threads](https://en.cppreference.com/w/cpp/thread/thread/thread)
 * [LLNL tutorial on Pthreads](https://computing.llnl.gov/tutorials/pthreads/)
 * [OpenMP 5.0 Reference Guide](https://www.openmp.org/wp-content/uploads/OpenMPRef-5.0-0519-web.pdf)
 * [OpenMP API Specification](https://www.openmp.org/wp-content/uploads/OpenMP-API-Specification-5.0.pdf)
