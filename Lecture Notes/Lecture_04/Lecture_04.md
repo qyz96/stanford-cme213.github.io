@@ -236,3 +236,10 @@ Choose your compiler in `Makefile`
 `$ make`
 
 `$ ./hello_world_openmp`
+
+---
+class: center, middle
+
+# Common use case: `for` loop
+
+This example cover 99% of the needs for scientific computing
