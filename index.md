@@ -17,6 +17,7 @@ This class will give hands-on experience with programming multicore processors, 
 ### Videos
 * [Lecture 1](https://youtu.be/mmJ__Ygexos)
 * [Lecture 2](https://youtu.be/ETOp2NkZrlo)
+* [Lecture 3](https://youtu.be/Mi1vwbsk6Fw)
 
 ### Class Information
 * Location: [School of Education, Room 128](https://campus-map.stanford.edu/?srch=School+of+Education+128)  
