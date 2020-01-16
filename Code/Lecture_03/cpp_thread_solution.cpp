@@ -12,24 +12,24 @@ void f1()
     cout << "f1() called\n";
 }
 
-void f2(int n)
+void f2(int m)
 {
     /* optional: make thread wait a bit */
     this_thread::sleep_for(chrono::milliseconds(10));
-    cout << "f2() called with n = " << n << endl;
+    cout << "f2() called with m = " << m << endl;
 }
 
-void f3(int &n)
+void f3(int &k)
 {
     this_thread::sleep_for(chrono::milliseconds(20));
-    cout << "f3() called; n is passed by reference; n = " << n << endl;
-    n += 3;
+    cout << "f3() called; k is passed by reference; k = " << k << endl;
+    k += 3;
 }
 
-void f4(int n, int &m)
+void f4(int m, int &k)
 {
-    cout << "f4() called with n = " << n << " and m = " << m << endl;
-    m += n;
+    cout << "f4() called with m = " << m << " and k = " << k << endl;
+    k += m;
 }
 
 void accumulate(vector<int>::iterator first,
