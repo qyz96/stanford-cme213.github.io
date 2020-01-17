@@ -18,6 +18,8 @@ Instructions for setup
 
 https://stanford-cme213.github.io/gcp.html
 
+![:width 50%](gcp.svg)
+
 ---
 class: middle
 
@@ -25,24 +27,48 @@ class: middle
 
 To do:
 
-1. Use a **non** a Stanford Google account, e.g., personal
+1. **Do not** use a Stanford Google account (or G Suite account) 
+2. Use a personal Google account
 2. Redeem coupons sent by TAs
 
 ---
-class: middle
+class: center, middle
 
 # Setup
 
-1. Set-up GCP project</br>https://console.cloud.google.com/cloud-resource-manager
-2. Install GCP SDK on your local machine</br>https://cloud.google.com/sdk/docs/downloads-interactive
+Set-up GCP project</br>https://console.cloud.google.com/cloud-resource-manager
+
+![:width 50%](2020-01-17-12-13-38.png)
+
+---
+class: center, middle
+
+Install GCP SDK on your local machine</br>https://cloud.google.com/sdk/docs/downloads-interactive
+
+![:width 50%](2020-01-17-12-14-09.png)
 
 ---
 class: middle
 
-# Create virtual machine `VM`
+# Create a virtual machine
 
 1. Download script</br>.compact[https://stanford-cme213.github.io/Code/create_vm_openmp.sh]
-2. Run `./create_vm_openmp.sh`
+2. Run [./create_vm_openmp.sh](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/create_vm_openmp.sh)
+
+Virtual machine: hardware + operating system and software
+
+---
+class: middle
+
+```
+$ ./create_vm_openmp.sh 
+Updated property [compute/zone].
+Created [https://www.googleapis.com/compute/v1/projects/cme213-winter-2020/zones/us-west1-b/instances/omp].
+NAME  ZONE        MACHINE_TYPE   PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
+omp   us-west1-b  n1-highcpu-8               10.138.0.5   34.82.44.63  RUNNING
+Installing necessary libraries. You will be able to log into the VM after several minutes with:
+gcloud compute ssh omp
+```
 
 ---
 class: center, middle
@@ -53,7 +79,7 @@ Runs Linux Ubuntu
 
 8 cores
 
-`make` & `g++`
+`make` & `g++` installed
 
 ---
 class: middle
@@ -71,7 +97,16 @@ Copy
 ---
 class: center, middle
 
-# OpenMP
+More information on `ssh`, `scp`
+
+https://cloud.google.com/compute/docs/gcloud-compute/
+
+https://cloud.google.com/sdk/docs/quickstarts 
+
+---
+class: center, middle
+
+![](2020-01-17-12-18-52.png)
 
 ---
 class: center, middle
@@ -79,6 +114,8 @@ class: center, middle
 C++ threads are great for low-level multicore programming
 
 But too general and complicated for engineering applications
+
+![:width 40%](2020-01-17-12-19-47.png)
 
 ---
 class: middle
@@ -135,7 +172,7 @@ class: center, middle
 
 Reference
 
-https://software.intel.com/sites/default/files/managed/6a/78/parallel_mag_issue18.pdf
+.compact[https://software.intel.com/sites/default/files/managed/6a/78/parallel_mag_issue18.pdf]
 
 ---
 class: center, middle
@@ -159,6 +196,62 @@ icc</br>icpc</br>ifort | `-openmp`
 ---
 class: center, middle
 
+# Installation on macOS
+
+---
+class: center, middle
+
+# Option 1: `libomp`
+
+`$ brew install libomp`
+
+Use the system compiler `/usr/bin/g++`
+
+Compile with options
+
+`-I/usr/local/include -Xpreprocessor -fopenmp`</br>`-L/usr/local/lib -lomp`
+
+---
+class: center, middle
+
+# Option 2: `gcc`
+
+`$ brew install gcc`
+
+Compiler: `/usr/local/bin/g++-9`
+
+Flag: `-fopenmp`
+
+---
+class: middle
+
+Which version of openMP do you have?
+
+This determines the set of features available
+
+```
+$ echo | cpp -I/usr/local/include -Xpreprocessor -fopenmp -dM | grep OPENMP 
+#define _OPENMP 201107
+$ echo | /usr/local/bin/cpp-9 -fopenmp -dM | grep OPENMP 
+#define _OPENMP 201511
+```
+
+---
+
+# Mapping
+
+Year | OpenMP version
+--- | ---
+200505 | 2.5
+200805 | 3.0
+201107 | 3.1
+201307 | 4.0
+201511 | 4.5
+201811 | 5.0
+
+---
+class: center, middle
+
 # Parallel regions
 
 ---
@@ -168,9 +261,11 @@ class: center, middle
 
 This is the basic building block
 
-This is often not how OpenMP is used in practice
+This is not how OpenMP is used in most cases
 
-Will serve simply as an introduction
+Serves simply as an introduction
+
+![:width 30%](2020-01-17-12-25-13.png)
 
 ---
 class: center, middle
@@ -180,9 +275,18 @@ class: center, middle
 ---
 class: center, middle
 
+This is called the
+
+.red[fork-join model]
+
+---
+class: center, middle
+
 `#pragma omp parallel`
 
-The block of code that follows is executed by all threads in the team
+The block of code that follows is executed 
+
+by all threads in the team
 
 ---
 class: center, middle
@@ -190,21 +294,6 @@ class: center, middle
 # Computing $\pi$
 
 ![:width 30%](pi.png)
-
----
-class: center, middle
-
-# Formula used to approximate $\pi$
-
-$$ \frac{\pi}{2} = 1 + \frac{1}{3} \Big(
-    1 + \frac{2}{5} \Big( 
-        1 + \frac{3}{7} \Big(
-            1 + \frac{4}{9} \Big(
-            1 + \cdots
-            \Big)
-        \Big)
-    \Big)
-\Big)$$
 
 ---
 class: middle
@@ -238,8 +327,217 @@ Choose your compiler in `Makefile`
 `$ ./hello_world_openmp`
 
 ---
+
+Sample output
+
+    Let's compute pi =              3.1415926535897932384626433832795028841...
+    [info] Number of threads = 8
+    Hello World from thread = 0
+    Thread  0 approximated Pi as     3141592653589793
+    Hello World from thread = 1    
+    Thread  1 approximated Pi as     314159265358979323846264
+    ...
+    Thread  7 approximated Pi as     31415926535897932384626433832795028841...
+    Thread 0 computed 16 digits of pi in    67 musecs (   4.188 musec per digit)
+    Thread 1 computed 24 digits of pi in    16 musecs (   0.667 musec per digit)
+    ...
+    Thread 7 computed 72 digits of pi in    68 musecs (   0.944 musec per digit)
+
+---
+class: center, middle
+
+# Formula used to approximate $\pi$
+
+$$ \frac{\pi}{2} = 1 + \frac{1}{3} \Big(
+    1 + \frac{2}{5} \Big( 
+        1 + \frac{3}{7} \Big(
+            1 + \frac{4}{9} \Big(
+            1 + \cdots
+            \Big)
+        \Big)
+    \Big)
+\Big)$$
+
+---
 class: center, middle
 
 # Common use case: `for` loop
 
 This example cover 99% of the needs for scientific computing
+
+---
+class: middle
+
+`for_loop_openmp.cpp`
+
+```
+#pragma omp parallel for
+    for (int i = 0; i < n; ++i)
+        z[i] = x[i] + y[i];
+```        
+
+---
+
+# Exercise
+
+`matrix_prod_openmp.cpp`
+
+Parallelize the matrix-matrix product
+
+Experiment with different options
+
+`./matrix_prod_openmp -p PROC`
+
+`PROC` number of threads to use
+
+---
+class: middle
+
+```
+#pragma omp parallel for
+for (int i = 0; i < size; ++i)
+    for (int j = 0; j < size; ++j)
+    {
+        float c_ij = 0;
+        for (int k = 0; k < size; ++k)
+            c_ij += MatA(i, k) * MatB(k, j);
+
+        mat_c[i * size + j] = c_ij;
+    }
+```
+
+---
+class: center, middle
+
+`for` loops can be scheduled in different ways by the library
+
+`#pragma omp for schedule(kind,chunk_size)`
+
+kind: `static`, `dynamic`, `guided`
+
+---
+class: center, middle
+
+`static`
+
+chunk size is fixed (`chunk_size`)
+
+round-robin assignment
+
+---
+class: center, middle
+
+`dynamic`
+
+Each thread executes a chunk
+
+Then, requests another chunk until none remain
+
+---
+class: center, middle
+
+`guided`
+
+Chunk size is different for each chunk
+
+Each successive chunk is smaller than the last
+
+---
+
+![](2020-01-16-15-54-36.png)
+
+---
+class: middle
+
+`nowait`
+
+```
+#pragma omp parallel
+{
+    #pragma omp for nowait
+    for (i=1; i<n; i++)
+        b[i] = (a[i] + a[i-1]) / 2.0;
+    #pragma omp for nowait
+    for (i=0; i<m; i++)
+        y[i] = sqrt(z[i]);
+}
+```
+
+---
+class: middle
+
+`collapse`
+
+```
+#pragma omp for collapse(2) private(i, k, j)
+    for (k=kl; k<=ku; k+=ks)
+        for (j=jl; j<=ju; j+=js)
+            for (i=il; i<=iu; i+=is)
+                bar(a,i,j,k);
+```
+
+---
+class: center, middle
+
+# OpenMP clause
+
+Recall in C++ threads:
+
+Variables passed as argument to a thread are **shared**
+
+Variables **inside the function** that a thread is executing are **private** to that thread
+
+---
+class: center, middle
+
+OpenMP makes some reasonable default choices
+
+But they can be changed using `shared` and `private`
+
+---
+class: middle
+
+`shared_private_openmp.cpp`
+
+---
+class: middle
+
+Variables declared before the block are `shared`
+
+```
+int shared_int = -1;
+#pragma omp parallel
+{
+    printf("Thread ID %2d | shared_int = %d\n", omp_get_thread_num(), 
+            shared_int);
+}
+```
+
+---
+class: middle
+
+```
+int is_private = -2;
+
+#pragma omp parallel private(is_private)
+{
+    const int rand_tid = rand();
+    is_private = rand_tid;
+    printf("Thread ID %2d | is_private = %d\n", omp_get_thread_num(), 
+            is_private);
+    assert(is_private == rand_tid);
+}
+```
+
+---
+class: middle
+
+# Data sharing attribute clause
+
+Most common:
+- `shared(list)`
+- `private(list)`
+
+Less common: `firstprivate`, `lastprivate`, `linear`
+
+`firstprivate`: private variable; initialized using value when construct is encountered
