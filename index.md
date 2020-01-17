@@ -22,13 +22,6 @@ This class will give hands-on experience with programming multicore processors, 
 * [Lecture 3](https://youtu.be/Mi1vwbsk6Fw)
 * [Lecture 4](https://youtu.be/wN0JRtCp7YY)
 
-### Class Information
-* Location: [School of Education, Room 128](https://campus-map.stanford.edu/?srch=School+of+Education+128)  
-* Lectures: Mon/Wed/Fri 1:30-2:50PM
-* Instructor: [Eric Darve](https://me.stanford.edu/people/eric-darve)  
-* Course Assistants: William Jen, Kingway Liang
-* [Syllabus](https://canvas.stanford.edu/courses/110850/assignments/syllabus)
-
 ### Office Hours
 * Wednesday 7-9PM; TA led; Huang 304
 * Thursday 7-9PM; TA led; Huang 304
@@ -43,6 +36,13 @@ This class will give hands-on experience with programming multicore processors, 
 * [VM instances information page](https://console.cloud.google.com/compute)
 * [Billing page](https://console.cloud.google.com/billing)
 * [GCP dashboard](https://console.cloud.google.com/home)
+
+### Class Information
+* Location: [School of Education, Room 128](https://campus-map.stanford.edu/?srch=School+of+Education+128)  
+* Lectures: Mon/Wed/Fri 1:30-2:50PM
+* Instructor: [Eric Darve](https://me.stanford.edu/people/eric-darve)  
+* Course Assistants: William Jen, Kingway Liang
+* [Syllabus](https://canvas.stanford.edu/courses/110850/assignments/syllabus)
 
 ### Reading and links
 * [C++ reference](https://en.cppreference.com/w/cpp)
