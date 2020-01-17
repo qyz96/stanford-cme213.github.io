@@ -2,7 +2,7 @@ class: center, middle
 
 # CME 213, ME 339 - Winter 2020
 
-## Eric Darve, ICME, Stanford
+## Eric Darve, ICME
 
 ![:width 40%](Stanford.jpg)
 
@@ -55,7 +55,7 @@ class: middle
 1. Download script</br>.compact[https://stanford-cme213.github.io/Code/create_vm_openmp.sh]
 2. Run [./create_vm_openmp.sh](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/create_vm_openmp.sh)
 
-Virtual machine: hardware + operating system and software
+Virtual machine:</br>hardware + operating system and software
 
 ---
 class: middle
@@ -96,6 +96,8 @@ Copy
 
 ---
 class: center, middle
+
+![:width 20%](2020-01-17-13-13-55.png)
 
 More information on `ssh`, `scp`
 
@@ -156,6 +158,8 @@ Supports C/C++ and Fortran on a wide variety of computers
 ---
 class: center, middle
 
+![:width 20%](2020-01-17-13-13-55.png)
+
 OpenMP website</br>https://openmp.org 
 
 Wikipedia</br>https://en.wikipedia.org/wiki/OpenMP
@@ -170,7 +174,7 @@ class: center, middle
 ---
 class: center, middle
 
-Reference
+The Parallel Universe
 
 .compact[https://software.intel.com/sites/default/files/managed/6a/78/parallel_mag_issue18.pdf]
 
@@ -270,6 +274,15 @@ Serves simply as an introduction
 ---
 class: center, middle
 
+`#pragma omp parallel`
+
+The block of code that follows is executed 
+
+by all threads in the team
+
+---
+class: center, middle
+
 ![:width 100%](2020-01-15-11-04-57.png)
 
 ---
@@ -278,15 +291,6 @@ class: center, middle
 This is called the
 
 .red[fork-join model]
-
----
-class: center, middle
-
-`#pragma omp parallel`
-
-The block of code that follows is executed 
-
-by all threads in the team
 
 ---
 class: center, middle
@@ -366,6 +370,8 @@ class: center, middle
 # Common use case: `for` loop
 
 This example cover 99% of the needs for scientific computing
+
+![:width 40%](2020-01-17-13-09-49.png)
 
 ---
 class: middle
@@ -520,6 +526,8 @@ int shared_int = -1;
 ---
 class: middle
 
+`private` clause
+
 ```
 int is_private = -2;
 
@@ -545,3 +553,10 @@ Most common:
 Less common: `firstprivate`, `lastprivate`, `linear`
 
 `firstprivate`: private variable; initialized using value when construct is encountered
+
+---
+class: center, middle
+
+![:width 20%](2020-01-17-13-13-55.png)
+
+.compact[https://www.openmp.org/spec-html/5.0/openmpsu106.html#x139-5540002.19.4]
