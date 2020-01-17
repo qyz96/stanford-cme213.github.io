@@ -86,9 +86,7 @@ int main(int argc, char **argv)
     // Output matrix C
     vector<float> mat_c(size * size);
 
-    /* Begin */
     high_resolution_clock::time_point time_begin = high_resolution_clock::now();
-#pragma omp parallel for
     for (int i = 0; i < size; ++i)
         for (int j = 0; j < size; ++j)
         {

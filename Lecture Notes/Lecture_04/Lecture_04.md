@@ -295,6 +295,8 @@ class: center, middle
 
 ![:width 30%](pi.png)
 
+[hello_world_openmp.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_04/hello_world_openmp.cpp)
+
 ---
 class: middle
 
@@ -320,7 +322,7 @@ class: middle
 ---
 class: middle
 
-Choose your compiler in `Makefile`
+Choose your compiler in [Makefile](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_04/Makefile)
 
 `$ make`
 
@@ -368,7 +370,7 @@ This example cover 99% of the needs for scientific computing
 ---
 class: middle
 
-`for_loop_openmp.cpp`
+[for_loop_openmp.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_04/for_loop_openmp.cpp)
 
 ```
 #pragma omp parallel for
