@@ -382,7 +382,7 @@ class: middle
 
 # Exercise
 
-`matrix_prod_openmp.cpp`
+[matrix_prod_openmp.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_04/matrix_prod_openmp.cpp)
 
 Parallelize the matrix-matrix product
 
@@ -394,6 +394,8 @@ Experiment with different options
 
 ---
 class: middle
+
+[matrix_prod_openmp_solution.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_04/matrix_prod_openmp_solution.cpp)
 
 ```
 #pragma omp parallel for
@@ -497,9 +499,9 @@ OpenMP makes some reasonable default choices
 But they can be changed using `shared` and `private`
 
 ---
-class: middle
+class: center, middle
 
-`shared_private_openmp.cpp`
+[shared_private_openmp.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_04/shared_private_openmp.cpp)
 
 ---
 class: middle
