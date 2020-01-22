@@ -64,7 +64,7 @@ int main(void)
     ent1 = -ent1;
     ent2 = -ent2;
 
-    printf("Change in entropy: %100.90f, %g\n", ent2 - ent1, ent2 - ent1 - 1.4378435611724853515625);
+    printf("Change in entropy: %50.40f [error %g]\n", ent2 - ent1, ent2 - ent1 - 1.4378435611724853515625);
     assert(fabs(ent2 - ent1 - 1.4378435611724853515625) < 1e-6);
 
     return 0;

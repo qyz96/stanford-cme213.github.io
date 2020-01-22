@@ -161,7 +161,6 @@ class: middle, center
 
 [list.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_05/list.cpp)
 
-
 ---
 class: middle
 
@@ -207,7 +206,9 @@ class: center, middle
 
 `taskwait`
 
-But, dependencies between tasks can be specified in a fine-grained fashion
+Can we specify dependencies between tasks in a more fine-grained fashion?
+
+![:width 20%](2020-01-21-17-38-43.png)
 
 ---
 class: center, middle
@@ -242,7 +243,7 @@ class: center, middle
 --- | --- | --- | ---
 `in` | | `out`/`inout` | `mutexinoutset`
 `out`/`inout` | `in` | `out`/`inout` | `mutexinoutset`
-`mutexinoutset` | `in` | `out`/`inout` | `mutexinoutset`
+`mutexinoutset` | `in` | `out`/`inout` |
 
 ---
 class: middle
@@ -260,6 +261,13 @@ int x = 1;
 ```
 
 Always prints `x = 1`
+
+---
+class: middle, center
+
+`mutexinoutset` 
+
+Defines mutually exclusive tasks
 
 ---
 class: middle
@@ -287,7 +295,12 @@ printf("d = %1d\n", d);
 ---
 class: middle, center
 
-# OpenMPMaster and Synchronization Constructs
+![](2020-01-22-12-09-10.png)
+
+---
+class: middle, center
+
+# OpenMPsynchronization constructs
 
 ---
 class: middle
@@ -313,16 +326,16 @@ Improved efficiency
 ---
 class: middle, center
 
- Exercise: `entropy.cpp`
+ Exercise: [entropy.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_05/entropy.cpp)
 
 ---
 class: middle, center
 
 # Atomic
 
-Not as efficient as `reduction`
-
 Allows: `+=`, `*=`, `/=`, ...
+
+Not as efficient as `reduction`
 
 ---
 class: middle, center
@@ -333,6 +346,11 @@ class: middle, center
 class: middle, center
 
 ![:width 50%](two_body.png)
+
+---
+class: middle, center
+
+[atomic.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_05/atomic.cpp)
 
 ---
 class: middle
@@ -358,7 +376,7 @@ class: middle, center
 
 Restricts execution of the associated structured block to a single thread at a time
 
-`critical.cpp`
+[critical.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_05/critical.cpp)
 
 ---
 class: middle
@@ -375,3 +393,12 @@ for (int i = 2; i <= n; ++i)
         m.insert(i); /* Save this prime */
 }
 ```
+
+---
+class: middle, center
+
+Other topics (not covered)
+
+Affinity, `target`, `simd`, locks
+
+[OpenMP examples](https://www.openmp.org/wp-content/uploads/openmp-examples-5.0.0.pdf), [OpenMP specifications](https://www.openmp.org/wp-content/uploads/OpenMP-API-Specification-5.0.pdf)
