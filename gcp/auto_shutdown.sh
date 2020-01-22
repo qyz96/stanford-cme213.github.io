@@ -6,9 +6,9 @@ thre_NoUser=30
 
 time_LowLoad=0
 # Load threshold below which cpu is deemed idle
-thre_LowLoad=0.3
+thre_LowLoad=0.1
 # Time of idle after which to shut down
-thre_TimeIdle=20
+thre_TimeIdle=60
 
 while [ 1 ]
 do
