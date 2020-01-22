@@ -11,10 +11,9 @@ This class will give hands-on experience with programming multicore processors, 
 * [Lecture 1](Lecture Notes/Lecture_01/Lecture_01.html)
 * [Lecture 2](Lecture Notes/Lecture_02/Lecture_02.html)
 * [C++ Refresher](Tutorial Notes/Tutorial_01.pdf) and [code](Tutorial Notes/code.zip)
-* [Lecture 3](Lecture Notes/Lecture_03/Lecture_03.html)
-* [Lecture 3 code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_03)
-* [Lecture 4](Lecture Notes/Lecture_04/Lecture_04.html)
-* [Lecture 4 code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_04)
+* [Lecture 3](Lecture Notes/Lecture_03/Lecture_03.html) and [code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_03)
+* [Lecture 4](Lecture Notes/Lecture_04/Lecture_04.html) and [code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_04)
+* [Lecture 5](Lecture Notes/Lecture_05/Lecture_05.html) and [code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_05)
 
 ### Videos
 * [Lecture 1](https://youtu.be/mmJ__Ygexos)
