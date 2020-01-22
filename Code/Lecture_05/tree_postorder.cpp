@@ -25,17 +25,13 @@ void FillTree(int max_level, int level, Node *curr_node)
         curr_node->left->left = curr_node->left->right = NULL;
 
         if (InsertCond())
-        {
             FillTree(max_level, level + 1, curr_node->left);
-        }
 
         curr_node->right = new Node;
         curr_node->right->left = curr_node->right->right = NULL;
 
         if (InsertCond())
-        {
             FillTree(max_level, level + 1, curr_node->right);
-        }
     }
 }
 
@@ -48,18 +44,13 @@ void Visit(Node *curr_node)
 // Sequential code
 int PostOrderTraverseSequential(struct Node *curr_node)
 {
-    int left = 0;
-    int right = 0;
+    int left = 0, right = 0;
 
     if (curr_node->left)
-    {
         left = PostOrderTraverseSequential(curr_node->left);
-    }
 
     if (curr_node->right)
-    {
         right = PostOrderTraverseSequential(curr_node->right);
-    }
 
     curr_node->data = left + right; // Number of children nodes
     return 1 + left + right;
@@ -73,7 +64,7 @@ int PostOrderTraverse(struct Node *curr_node)
     if (curr_node->left)
 #pragma omp task shared(left)
         left = PostOrderTraverse(curr_node->left);
-    // Default attribute for task constructs is firstprivate.
+    // Default attribute for task constructs is firstprivate
     if (curr_node->right)
 #pragma omp task shared(right)
         right = PostOrderTraverse(curr_node->right);
@@ -87,11 +78,10 @@ int PostOrderTraverse(struct Node *curr_node)
 
 int main()
 {
-    Node *root = new Node;
-
     int n_level = 4; // Maximum number of levels in the tree
-
     int level = 1;
+
+    Node *root = new Node;
 
     // Create a random tree
     srand(time(NULL));
@@ -107,27 +97,3 @@ int main()
     printf("(Expected number of nodes: %g)\n",
            2. * (pow(2. * P, n_level - 1) - 1) / (2. * P - 1.) + 1);
 }
-
-#if 0
-
-int PostOrderTraverse(struct Node* curr_node) {
-    int left = 0;
-    int right = 0;
-
-    if(curr_node->left)
-#pragma omp task shared(left)
-        left = PostOrderTraverse(curr_node->left);
-
-    if(curr_node->right)
-#pragma omp task shared(right)
-        right = PostOrderTraverse(curr_node->right);
-
-#pragma omp taskwait
-    curr_node->data = left + right;
-    // Number of children nodes
-    Visit(curr_node);
-
-    return 1 + left + right;
-}
-
-#endif

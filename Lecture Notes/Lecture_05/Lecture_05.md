@@ -18,7 +18,10 @@ Central for multicore scientific computing
 
 `#pragma omp parallel for`
 
-Next:
+---
+class: center, middle
+
+Next topic
 
 `#pragma omp task`
 
@@ -44,6 +47,11 @@ class: img-right
 Go through each node and execute some operation
 
 Tree is not full, e.g., number of child nodes varies
+
+---
+class: middle, center
+
+[tree.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_05/tree.cpp)
 
 ---
 class: middle
@@ -97,7 +105,12 @@ class: center, middle
 ---
 class: center, middle
 
-This algorithm requires waiting for traversal to be complete before visiting the node
+This algorithm requires waiting for traversal of children to be complete.
+
+---
+class: middle, center
+
+[tree_postorder.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_05/tree_postorder.cpp)
 
 ---
 class: middle
@@ -140,6 +153,14 @@ class: middle, center
 Next example
 
 Processing entries in a list
+
+![:width 20%](2020-01-22-12-02-04.png)
+
+---
+class: middle, center
+
+[list.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_05/list.cpp)
+
 
 ---
 class: middle
