@@ -47,14 +47,20 @@ This class will give hands-on experience with programming multicore processors, 
 * [Syllabus](https://canvas.stanford.edu/courses/110850/assignments/syllabus)
 
 ### Reading and links
+
+#### OpenMP
 * [OpenMP LLNL guide](https://computing.llnl.gov/tutorials/openMP/)
 * [OpenMP guide by Yliluoma](https://bisqwit.iki.fi/story/howto/openmp/)
+* [OpenMP 5.0 Reference Guide](https://www.openmp.org/wp-content/uploads/OpenMPRef-5.0-0519-web.pdf)
+* [OpenMP API Specification](https://www.openmp.org/wp-content/uploads/OpenMP-API-Specification-5.0.pdf)
+
+#### C++ threads
 * [C++ reference](https://en.cppreference.com/w/cpp)
 * [Simple examples of C++ multithreading](https://www.geeksforgeeks.org/multithreading-in-cpp/)
 * [C++ threads](https://en.cppreference.com/w/cpp/thread/thread/thread)
 * [LLNL tutorial on Pthreads](https://computing.llnl.gov/tutorials/pthreads/)
-* [OpenMP 5.0 Reference Guide](https://www.openmp.org/wp-content/uploads/OpenMPRef-5.0-0519-web.pdf)
-* [OpenMP API Specification](https://www.openmp.org/wp-content/uploads/OpenMP-API-Specification-5.0.pdf)
+
+#### CUDA
 * [CUDA Programming Guides and References](http://docs.nvidia.com/cuda/index.html)
 * [CUDA C++ Programming Guide](http://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf)
 * [CUDA C++ Best Practices Guide](http://docs.nvidia.com/cuda/pdf/CUDA_C_Best_Practices_Guide.pdf)
@@ -69,5 +75,7 @@ This class will give hands-on experience with programming multicore processors, 
 * [Data sheet for Tesla GPUs](https://en.wikipedia.org/wiki/Nvidia_Tesla). **Tesla** is NVIDIA's brand name for their products targeting stream processing or general-purpose graphics processing units (GPGPU).
 * [K80 device info](k80.md)
 * [K80 data sheet](https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/tesla-product-literature/TeslaK80-datasheet.pdf)
+
+#### Sorting algorithms
 * [A novel sorting algorithm for many-core architectures based on adaptive bitonic sort](https://ieeexplore.ieee.org/abstract/document/6267838)
 * [Adaptive Bitonic Sorting](https://pdfs.semanticscholar.org/bcdf/c4e40c79547c9daf89dada4e1c23056871cb.pdf)
