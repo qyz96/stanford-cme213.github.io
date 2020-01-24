@@ -33,7 +33,7 @@ class: middle
 
 # Array section syntax
 
-`[ lower-bound : length : stride]`
+`[ lower-bound : length : stride ]`
 
 `[:]`
 
@@ -44,7 +44,7 @@ class: middle
 
 `a[lb : n : s]`
 
-Indices: `lb`, `lb+s`, ..., `lb + (n-1)*s`
+Indices: `lb`, `lb+s`, ..., `lb+(n-1)*s`
 
 Example: `a[0:n]`, `a[0:n/2:2]`
 
@@ -62,7 +62,18 @@ Use buckets
 
 Partitions the bits into small groups
 
-Order the bits using the buckets
+Order using groups of bits and buckets
+
+---
+class: center, middle
+
+# Radix sort animations
+
+[Musical demo MSD](https://www.youtube.com/watch?v=Tmq1UkL7xeU)
+
+[Musical demo LSD](https://www.youtube.com/watch?v=LyRWppObda4)
+
+Most/least significant digit
 
 ---
 class: middle, center
@@ -70,6 +81,44 @@ class: middle, center
 Quicksort
 
 One of the fastest sorting algorithms
+
+---
+class: middle
+
+# Quicksort algorithm
+
+Divide and conquer approach. Divide step:
+
+- Choose a pivot $x$
+- Separate sequence into 2 sub-sequences with all elements smaller than $x$ and greater than $x$
+
+Conquer step:
+
+- Sort the two subsequences
+
+---
+class: middle, center
+
+![:width 70%](2020-01-23-14-47-01.png)
+
+---
+class: middle
+
+```
+def quicksort(A,l,u):
+    if l < u-1:
+        x = A[l]
+        s = l
+        for i in range(l+1,u):
+            if A[i] <= x: # Swap entries smaller than pivot
+                s = s+1
+                A[s], A[i] = A[i], A[s]
+        A[s], A[l] = A[l], A[s]
+        quicksort(A,l,s)
+        quicksort(A,s+1,u)
+```
+
+[Python code](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_06/sort.py)
 
 ---
 class: middle, center
@@ -94,46 +143,6 @@ Worst-case running time is $O(n^2)$ when input is already sorted
 Not stable
 
 ---
-class: middle
-
-# Quicksort algorithm
-
-Divide and conquer approach
-
-Divide step:
-
-- Choose a pivot x
-- Separate sequence into 2 sub-sequences with all elements smaller than x and greater than x
-
-Conquer step:
-
-- Sort the two subsequences
-
----
-class: middle
-
-```
-def quicksort(A,l,u):
-    if l < u-1:
-        x = A[l]
-        s = l
-        for i in range(l+1,u):
-            if A[i] <= x: # Swap entries smaller than pivot
-                s = s+1
-                A[s], A[i] = A[i], A[s]
-        A[s], A[l] = A[l], A[s]
-        quicksort(A,l,s)
-        quicksort(A,s+1,u)
-```
-
-[Python code](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_06/sort.py)
-
----
-class: middle, center
-
-![:width 70%](2020-01-23-14-47-01.png)
-
----
 class: center
 
 ![:width 35%](quicksort_par.jpg)
@@ -152,12 +161,15 @@ class: middle
 
 2. Sub-lists are progressively merged to produce larger ordered sub-lists.
 
-[Musical demo](https://www.youtube.com/watch?v=ZRPoEKHXTJg)
-
 ---
 class: center
 
 ![:width 55%](mergesort.png)
+
+---
+class: middle, center
+
+[Musical demo](https://www.youtube.com/watch?v=ZRPoEKHXTJg)
 
 ---
 class: middle, center
@@ -195,15 +207,6 @@ Sequence of integers in the interval $[a,b]$
 1. Split $[a,b]$ into $p$ sub-intervals
 2. Move each element to the appropriate bucket (prefix sum)
 3. Sort each bucket in parallel!
-
----
-class: center, middle
-
-# Variant: radix sort
-
-[Musical demo MSD](https://www.youtube.com/watch?v=Tmq1UkL7xeU)
-
-[Musical demo LSD](https://www.youtube.com/watch?v=LyRWppObda4)
 
 ---
 class: center, middle
@@ -292,7 +295,7 @@ Build a bitonic sorting network to sort the entire array
 
 Process:
 
-1. Star from small bitonic sequences
+1. Start from small bitonic sequences
 2. Use compare and merge to get longer bitonic sequences
 3. Repeat until sorted
 
@@ -428,6 +431,8 @@ class: middle, center
 The exercise is complete
 
 Your code should now produce the correct result!
+
+[bitonic_sort.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_06/bitonic_sort.cpp)
 
 ---
 class: middle
