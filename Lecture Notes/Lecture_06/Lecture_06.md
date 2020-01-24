@@ -51,7 +51,12 @@ Example: `a[0:n]`, `a[0:n/2:2]`
 ---
 class: middle, center
 
-Homework 2 focusses on radix sort
+# Sorting algorithms on shared memory computers
+
+---
+class: middle, center
+
+Homework 2 focusses on **radix sort**
 
 ---
 class: middle, center
