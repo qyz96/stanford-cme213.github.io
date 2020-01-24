@@ -14,12 +14,14 @@ This class will give hands-on experience with programming multicore processors, 
 * [Lecture 3](Lecture Notes/Lecture_03/Lecture_03.html) and [code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_03)
 * [Lecture 4](Lecture Notes/Lecture_04/Lecture_04.html) and [code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_04)
 * [Lecture 5](Lecture Notes/Lecture_05/Lecture_05.html) and [code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_05)
+* [Lecture 6](Lecture Notes/Lecture_06/Lecture_06.html) and [code](https://github.com/stanford-cme213/stanford-cme213.github.io/tree/master/Code/Lecture_06)
 
 ### Videos
 * [Lecture 1](https://youtu.be/mmJ__Ygexos)
 * [Lecture 2](https://youtu.be/ETOp2NkZrlo)
 * [Lecture 3](https://youtu.be/Mi1vwbsk6Fw)
 * [Lecture 4](https://youtu.be/wN0JRtCp7YY)
+* [Lecture 5](https://youtu.be/Oip9nrDzAAQ)
 
 ### Office Hours
 * Wednesday 7-9PM; TA led; Huang 304
