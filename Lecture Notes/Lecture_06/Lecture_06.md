@@ -126,6 +126,8 @@ def quicksort(A,l,u):
         quicksort(A,s+1,u)
 ```
 
+[Python code](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_06/sort.py)
+
 ---
 class: middle, center
 
@@ -308,11 +310,122 @@ $(\log n)^2$ passes
 
 [Musical demo](https://www.youtube.com/watch?v=r-erNO-WICo)
 
+[Python code](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_06/bitonic_sort.py)
+
 ---
 class: middle
 
 Exercise
 
-- bitonic_sort_lab.cppOpen this code to start the exercise
-- bitonic_sort.cppSolution with OpenMP
-- bitonic_sort_seq.cppReference sequential implementation
+- [bitonic_sort_lab.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_06/bitonic_sort_lab.cpp)Open this code to start the exercise
+- [bitonic_sort.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_06/bitonic_sort.cpp) Solution with OpenMP
+- [bitonic_sort_seq.cpp](https://github.com/stanford-cme213/stanford-cme213.github.io/blob/master/Code/Lecture_06/bitonic_sort_seq.cpp)Reference sequential implementation
+
+---
+class: center, middle
+
+`-DNDEBUG` no-debug option
+
+`true` by default
+
+Remove `-DNDEBUG` from `Makefile` to print additional information
+
+---
+class: center, middle
+
+Outer `i` loop cannot be parallelized
+
+Step 1: parallelize `j` loop
+
+`for (int j = 0; j < n; j += i)`
+
+Call `BitonicSortSeq(...)` inside `j` loop
+
+---
+class: middle
+
+Step 2: split `i` loop into small chunks and large chunks
+
+`for (int i = 2; i <= chunk; i <<= 1){}`
+
+`for (int i = chunk << 1; i <= n; i <<= 1){}`
+
+---
+class: middle
+
+Step 3: large-chunk `i` loop
+
+`for (int i = chunk << 1; i <= n; i <<= 1)`
+
+Call `BitonicSortPar(j, i, seq, up, chunk)`
+
+---
+class: middle
+
+`BitonicSortPar()`
+
+`split_length` is very large
+
+Step 4: parallelize `i` loop in `BitonicSortPar()`
+
+`for (int i = start; i < start + split_length; i++)`
+
+---
+class: middle
+
+Ultimately fails when `split_length` becomes small again
+
+Step 5: recursively call `BitonicSortPar` only if `split_length > chunk`
+
+Add 
+
+`if (split_length > chunk){}` 
+
+around two recursive calls to `BitonicSortPar()`
+
+---
+class: middle
+
+Code is now wrong; one more pass is needed!
+
+Go back to the `i` loop 
+
+`for (int i = chunk << 1; i <= n; i <<= 1){}`
+
+in `main()`
+
+---
+class: middle
+
+Step 6: add
+
+```
+#pragma omp parallel for
+for (int j = 0; j < n; j += chunk)
+{
+    bool up = ((j / i) % 2 == 0);
+    BitonicSortSeq(j, chunk, seq, up);
+}
+```
+
+at the end of the `i` loop block
+
+`for (int i = chunk << 1; i <= n; i <<= 1){}`
+
+---
+class: middle
+
+```
+darve@omp:~$ export OMP_NUM_THREADS=1; ./bitonic_sort
+Size of array: 8388608
+Size of chunks: 8388608
+Number of chunks: 1
+Number of threads: 1
+Elapsed time = 3.24 sec, p T_p = 3.24.
+darve@omp:~$ export OMP_NUM_THREADS=4; ./bitonic_sort
+Size of array: 8388608
+Size of chunks: 2097152
+Number of chunks: 4
+Number of threads: 4
+Elapsed time = 0.83 sec, p T_p = 3.33.
+```
