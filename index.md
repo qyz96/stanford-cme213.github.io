@@ -47,6 +47,8 @@ This class will give hands-on experience with programming multicore processors, 
 * [Syllabus](https://canvas.stanford.edu/courses/110850/assignments/syllabus)
 
 ### Reading and links
+* [OpenMP LLNL guide](https://computing.llnl.gov/tutorials/openMP/)
+* [OpenMP guide by Yliluoma](https://bisqwit.iki.fi/story/howto/openmp/)
 * [C++ reference](https://en.cppreference.com/w/cpp)
 * [Simple examples of C++ multithreading](https://www.geeksforgeeks.org/multithreading-in-cpp/)
 * [C++ threads](https://en.cppreference.com/w/cpp/thread/thread/thread)
