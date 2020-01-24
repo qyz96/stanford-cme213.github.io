@@ -351,6 +351,11 @@ Step 2: split `i` loop into small chunks and large chunks
 `for (int i = chunk << 1; i <= n; i <<= 1){}`
 
 ---
+class: middle, center
+
+![](bitonic_sort.png)
+
+---
 class: middle
 
 Step 3: large-chunk `i` loop
@@ -381,7 +386,12 @@ Add
 
 `if (split_length > chunk){}` 
 
-around two recursive calls to `BitonicSortPar()`
+around the two recursive calls to `BitonicSortPar()`
+
+---
+class: middle, center
+
+![](bitonic_sort.png)
 
 ---
 class: middle
@@ -411,6 +421,13 @@ for (int j = 0; j < n; j += chunk)
 at the end of the `i` loop block
 
 `for (int i = chunk << 1; i <= n; i <<= 1){}`
+
+---
+class: middle, center
+
+The exercise is complete
+
+Your code should now produce the correct result!
 
 ---
 class: middle
