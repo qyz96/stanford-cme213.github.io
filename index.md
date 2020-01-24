@@ -22,6 +22,7 @@ This class will give hands-on experience with programming multicore processors, 
 * [Lecture 3](https://youtu.be/Mi1vwbsk6Fw)
 * [Lecture 4](https://youtu.be/wN0JRtCp7YY)
 * [Lecture 5](https://youtu.be/Oip9nrDzAAQ)
+* [Lecture 6](https://youtu.be/O8v4JXwDGws)
 
 ### Office Hours
 * Wednesday 7-9PM; TA led; Huang 304
